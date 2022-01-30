@@ -1,5 +1,31 @@
 const initialState = {
     items: [],
+    comments: [
+        {   id: 237,
+            comment: 'Завидую белой завистью!!',
+            name: 'Artur',
+        },
+        {   id: 238,
+            comment: 'Естественно!!!',
+            name: 'Иван',
+        },
+        {   id: 239,
+            comment: 'Ну конечно!!',
+            name: 'Саня',
+        },
+        {   id: 240,
+            comment: 'Быть тупым это норма!!',
+            name: 'Леха',
+        },
+        {   id: 241,
+            comment: 'Не жизнь, а малина!',
+            name: 'Игорь',
+        },
+        {   id: 242,
+            comment: 'Окееей',
+            name: 'Алексей',
+        }
+    ],
     loading: false,
 };
 const comments = (state = initialState, action) => {
@@ -15,15 +41,10 @@ const comments = (state = initialState, action) => {
                 items: action.payload,
                 loading: false
             }
-        case 'add/name/comment' :
+        case 'add/new/comment' :
             return {
                 ...state,
-                newCommentName: action.payload
-            }
-        case 'add/text/comment' :
-            return  {
-                ...state,
-                newComment: action.payload
+                comments: [...state.comments, {id: action.id, comment: action.comment, name: action.name}]
             }
 
         default :

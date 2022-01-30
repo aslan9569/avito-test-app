@@ -1,0 +1,9 @@
+.headerText {
+    text-align: center;
+    font-size: 36px;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding-top: 15px;
+    position: sticky;
+    top: 0;
+    background-color: white;
+}

@@ -26,3 +26,11 @@ export const loadPhotosComments = (id) => {
           })
   }
 }
+export const newComment = (id, name, text) => {
+  return {
+    type: 'add/new/comment',
+    id: id,
+    name: name,
+    comment: text
+  }
+}
